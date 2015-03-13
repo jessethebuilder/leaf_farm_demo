@@ -87,10 +87,10 @@
                     <!--<li style="border-bottom-width:0px;">(click to order)</li>-->
                     <% prod.pricing_array.each do |price| -%>
                       <li>
-                        <%= link_to add_to_order_leaf_farm_demo_path, :remote => true do %>
+                        <%# todo= link_to add_to_order_leaf_farm_demo_path, :remote => true do %>
                           <%= price['Unit'] %>:
                           <strong><%= number_to_currency(price['Price'], :unit => '') %></strong>
-                        <% end %>
+                        <%# end %><!-- link -->
                       </li>
                     <% end -%>
                   </ul>
@@ -116,7 +116,7 @@
   </div><!-- container -->
 </div><!-- leafly_menu -->
 
-<%= render :partial => 'leaf_farm_demos/partials/footer' %>
+<%= render :partial => 'parts/footer' %>
 
 
 <script>
