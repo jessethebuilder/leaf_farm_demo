@@ -26,22 +26,11 @@ class DispensariesController < ApplicationController
   private
 
   def _leafly_connection
-    if Dispensary.first
-      Dispensary.first.leafly_connection || create_leafly_connection_from_hal
-    else
-      create_leafly_connection_from_hal
-    end
-  end
-
-  def create_leafly_connection_from_hal
-    lc = LeaflyConnection.new :app_id => hal.social_networking['leafly']['id'],
-                              :app_key => hal.social_networking['leafly']['key']
-    lc.save
-    lc
+    @leafly_connection ||= LeaflyConnection.first
   end
 
   def set_leafly_slug
-    @leafly_slug = params[:leafly_id] || Dispensary.first.leafly_slug
+    @leafly_slug = params[:leafly_slug] || Dispensary.first.leafly_slug
 
   end
 
@@ -56,25 +45,10 @@ class DispensariesController < ApplicationController
   end
 
   def custom_menu_order(menu_hash)
+    #put Flower first and Other last
     h = {}
     h['Flower'] = menu_hash.delete('Flower')
     other = menu_hash.delete('Other')
     h.merge(menu_hash).merge({'Other' => other})
   end
-
-
-
-  #
-  # def set_dispensary
-  #   if params[:leafly_id]
-  #     @dispensary = _leafly_connection.build_dispensary(@leafly_slug)
-  #     @dispensary.leafly_connection = _leafly_connection
-  #     @show_leafly_target = false
-  #   else
-  #     @dispensary = Dispensary.first
-  #     @show_leafly_target = false
-  #     #todo
-  #     # @show_leafly_target = true
-  #   end
-  # end
 end

@@ -1,1 +1,142 @@
-hello
+<%# head_info('Leaf Farm Demo Menu', @dispensary.description.to_s, image_url('logos/leaf_farm_with_text_logo.png'),
+             'product', 'anysoft.us', dispensar) %>
+
+<div id="leafly_menu">
+    <h1>Menu</h1>
+
+    <% if @specials.count > 0 -%>
+      <div id="specials">
+        <%# todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {:section => 'specials'} %>
+
+        <h2 id="Specials">Specials</h2>
+
+        <ul class="price_list">
+          <% @specials.each do |s| -%>
+            <li>
+              <div class="row special_row">
+                <%#= link_to add_to_order_leaf_farm_demo_path, :remote => true  do %>
+                  <div class="col-xs-3">
+                    <h3>
+                      <%= s.name %>
+
+                      <!--<small>-->
+                      <!--<%= s.description %>-->
+                      <!--</small>-->
+                    </h3>
+                  </div><!-- col -->
+
+                  <div class="col-xs-9">
+                    <h4>
+                      <%= s.description %>
+                      <small>
+                        <%= s.fine_print %>
+                      </small>
+                    </h4>
+
+                  </div><!-- col -->
+                  <%# end -%><!-- link -->
+              </div><!-- row -->
+            </li>
+          <% end -%>
+        </ul>
+
+      </div>
+      <% end -%><!-- end specials -->
+
+
+    <% @menu.each do |title, products| -%>
+      <%#todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {section: title.downcase} %>
+
+      <h2 id="<%= title %>"><%= title %></h2>
+
+
+
+      <% products.in_groups_of(2) do |prod_group| -%>
+        <div class="row product_row">
+
+          <% prod_group.each do |prod| -%>
+            <% if prod -%>
+              <%# prod = DispensaryProduct.create_with_leafly_product_hash(product) %>
+
+              <div class="col-md-6 leafly_product">
+                <div class="col-xs-6">
+                  <h3><%= prod.name %> <small><%= prod.description %></small></h3>
+
+                  <% if prod.has_rating? -%>
+                    <div class="leafly_rating">
+                      Leafly Rating: <strong><%= prod.rating %></strong>
+                      <small>
+                        based on <%= prod.rating_count %> ratings
+                      </small>
+                    </div>
+                  <% end %>
+                </div><!-- col -->
+
+                <div class="col-xs-2 leafly_link">
+                  <% if prod.has_source_image? -%>
+                    <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
+                      <%= image_tag prod.source_image_path, class: 'float-right', style: 'height:50px;' -%>
+                      <%= content_tag(:h4, prod.category) if prod.category%>
+                    <% end %>
+                  <% end -%>
+
+                </div><!-- col -->
+
+                <div class="col-xs-4 pricing">
+                  <ul class="price_list">
+                    <!--<li style="border-bottom-width:0px;">(click to order)</li>-->
+                    <% prod.pricing_array.each do |price| -%>
+                      <li>
+                        <%= link_to add_to_order_leaf_farm_demo_path, :remote => true do %>
+                          <%= price['Unit'] %>:
+                          <strong><%= number_to_currency(price['Price'], :unit => '') %></strong>
+                        <% end %>
+                      </li>
+                    <% end -%>
+                  </ul>
+
+                </div><!-- col -->
+                <div class="clearfix"></div>
+              </div><!-- big col -->
+              <% if prod_group.index(prod) == 0 && !prod_group[1].nil? #if it is the first of two products in
+                   #the group AND there ARE 2 products in the
+                   #group(the second product is not nil), put this faux border
+                   #at the bottom, for after collapse. -%>
+                <div class="leaf_farm_menu_faux_border_row"></div>
+              <% end %>
+              <%# else #for the nil on the last product in the group %>
+              <!--<div class="col-md-6 leafly_product hide empty_row"></div>-->
+            <% end #if %>
+
+          <% end %>
+        </div><!-- row -->
+
+      <% end -%>
+    <% end -%>
+  </div><!-- container -->
+</div><!-- leafly_menu -->
+
+<%= render :partial => 'leaf_farm_demos/partials/footer' %>
+
+
+<script>
+//  function link_menu(){
+//    $('.jump_to_select').change(function(e){
+//      location.hash = '#' + $(this).val();
+//      window.scrollBy(0, -120);
+//      $('.jump_to_select').each(function(){
+//        $(this).val("Jump to");
+//      })
+//    })
+//  }
+//
+//  function prepareLeafFarmDemo(){
+//    prepareLeaflyTargetBanner();
+//    prepareMenu();
+//    link_menu();
+//  }
+//
+//
+//
+//  ready_methods.push(prepareLeafFarmDemo);
+</script>

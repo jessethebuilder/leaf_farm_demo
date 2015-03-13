@@ -1,0 +1,17 @@
+<div class="container">
+  <%= render :partial => 'parts/share_on_bar' if do_vendor? %>
+</div>
+
+<div class="dispensary_name">
+  <div class="container">
+    <%= image_tag 'leaf_farm/logos/leaf_farm_logo_small.png', :width => '100px' %>
+
+    <div class="row">
+      <div class="col-md-12">
+        <%= @dispensary.name %>
+
+      </div>
+    </div>
+
+  </div>
+</div>
