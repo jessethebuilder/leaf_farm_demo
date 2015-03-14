@@ -15,13 +15,13 @@ class DispensariesController < ApplicationController
     @news_stories = NewsStory.published.order('updated_at DESC')
   end
 
-  def info
-
-  end
-
-  def pitch
-
-  end
+  # def info
+  #
+  # end
+  #
+  # def pitch
+  #
+  # end
 
   private
 

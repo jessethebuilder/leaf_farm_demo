@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # resource :dispensary
+  resource :dispensary
 
   root :to => 'dispensaries#show'
 

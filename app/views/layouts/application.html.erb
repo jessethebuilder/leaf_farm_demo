@@ -10,12 +10,16 @@
 </head>
 <body>
 
-<%= render 'parts/header' %>
 <%= render 'parts/top_nav' %>
+<%= render 'parts/header' %>
 
 <%= yield %>
 
 <%= render 'parts/footer' %>
+
+<script>
+  doReadyMethods();
+</script>
 
 </body>
 </html>

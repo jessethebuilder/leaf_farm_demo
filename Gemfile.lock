@@ -5,18 +5,16 @@ GIT
     twitter_express (0.0.1)
       rails
 
-GIT
-  remote: https://github.com/jessethebuilder/farm_tools
-  revision: e1d5f0d3123d8ae15cee77a929c4c8acded77034
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools
   specs:
     farm_tools (0.0.3)
       bootsy
       geocoder
       koala (~> 1.11.0rc)
 
-GIT
-  remote: https://github.com/jessethebuilder/leaf_farm
-  revision: eb7bab892b8683752cbe9e1cc9dffa415278bff5
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
   specs:
     leaf_farm (0.0.2)
       carrierwave
