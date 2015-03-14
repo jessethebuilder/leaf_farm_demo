@@ -5,16 +5,18 @@ GIT
     twitter_express (0.0.1)
       rails
 
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools
+GIT
+  remote: https://github.com/jessethebuilder/farm_tools
+  revision: 1e0cebcd4d51e88604f5931039d71fe4063489f2
   specs:
     farm_tools (0.0.3)
       bootsy
       geocoder
       koala (~> 1.11.0rc)
 
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
+GIT
+  remote: https://github.com/jessethebuilder/leaf_farm
+  revision: 9f2968dbf7071d5940a0fbb6fd021fd12cb5f3dd
   specs:
     leaf_farm (0.0.2)
       carrierwave
@@ -75,10 +77,9 @@ GEM
       mini_magick (~> 4.0)
       remotipart (~> 1.2)
     builder (3.2.2)
-    byebug (3.5.1)
-      columnize (~> 0.8)
-      debugger-linecache (~> 1.2)
-      slop (~> 3.6)
+    byebug (4.0.1)
+      columnize (= 0.9.0)
+      rb-readline (= 0.5.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -98,7 +99,6 @@ GEM
     columnize (0.9.0)
     database_cleaner (1.0.1)
     debug_inspector (0.0.2)
-    debugger-linecache (1.2.0)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -118,7 +118,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.6-x64-mingw32)
+    ffi (1.9.7)
     formatador (0.2.5)
     geocoder (1.2.7)
     globalid (0.3.3)
@@ -217,6 +217,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    rb-readline (0.5.2)
     rdoc (4.2.0)
       json (~> 1.4)
     remotipart (1.2.1)
