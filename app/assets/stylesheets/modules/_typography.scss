@@ -1,8 +1,6 @@
 @font-face{
-  font-family: bree_serif;
-  src: url(http://fonts.googleapis.com/css?family=Bree+Serif);
+  font-family: sinister_black;
+  //  src: url('..\..\fonts\sinister_black.ttf'));
+  //  src: url(asset_url('sinister_black.ttf'));
+  src: url(font_path('sinister_black.ttf'));
 }
-
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-
-@import url(http://fonts.googleapis.com/css?family=Lobster);
