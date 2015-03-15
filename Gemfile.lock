@@ -14,9 +14,8 @@ GIT
       geocoder
       koala (~> 1.11.0rc)
 
-GIT
-  remote: https://github.com/jessethebuilder/leaf_farm
-  revision: 9f2968dbf7071d5940a0fbb6fd021fd12cb5f3dd
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
   specs:
     leaf_farm (0.0.2)
       carrierwave
@@ -118,12 +117,12 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.7)
+    ffi (1.9.8)
     formatador (0.2.5)
     geocoder (1.2.7)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    guard (2.12.4)
+    guard (2.12.5)
       formatador (>= 0.2.4)
       listen (~> 2.7)
       lumberjack (~> 1.0)

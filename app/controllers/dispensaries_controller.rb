@@ -1,8 +1,7 @@
 class DispensariesController < ApplicationController
   include ApplicationHelper
 
-  before_action :set_leafly_slug, :only => [:show, :menu, :home, :pitch, :info]
-  before_action :set_dispensary, :only => [:show, :menu, :home, :pitch, :info]
+  before_action :set_dispensary, :only => [:show]
 
   respond_to :html, :js
 

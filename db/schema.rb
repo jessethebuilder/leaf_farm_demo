@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313060718) do
+ActiveRecord::Schema.define(version: 20150315211131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 20150313060718) do
     t.string   "tag_line"
     t.string   "tag_line_blurb"
     t.text     "details_data"
-    t.text     "menu_data"
     t.string   "leafly_slug"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -82,7 +81,6 @@ ActiveRecord::Schema.define(version: 20150313060718) do
     t.boolean  "medical"
     t.text     "hours"
     t.integer  "update_frequency"
-    t.text     "specials_data"
     t.text     "reviews_data"
     t.string   "google_api_key"
   end
@@ -91,6 +89,8 @@ ActiveRecord::Schema.define(version: 20150313060718) do
     t.integer  "dispensary_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "menu_data"
+    t.text     "specials_data"
   end
 
   create_table "dispensary_products", force: :cascade do |t|
@@ -178,8 +178,9 @@ ActiveRecord::Schema.define(version: 20150313060718) do
     t.string   "name"
     t.text     "description"
     t.string   "fine_print"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "dispensary_menu_id"
   end
 
   create_table "users", force: :cascade do |t|
