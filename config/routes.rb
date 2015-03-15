@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resource :dispensary
 
+  resource :dispensary_menu
+
+  get 'menu', to: 'dispensary_menus#show'
+
   root :to => 'dispensaries#show'
 
 

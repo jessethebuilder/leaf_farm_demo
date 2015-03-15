@@ -1,5 +1,12 @@
+body{
+//  background-color: $background-color;
+  background-image: image_url('backgrounds/chalk_board.jpg');
+  background-size: 100%;
+}
+
 h1{
-  font-size: 100px;
-  font-family: sinister_black;
-  font-weight: 600;
+  font-size: 120px;
+  font-family: 'Amatic SC';
+  font-weight: 700;
+  color: $main_font_color;
 }
