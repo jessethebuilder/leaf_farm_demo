@@ -1,0 +1,32 @@
+#specials{
+
+  ul{
+    list-style: none;
+    padding-left: 0px;
+
+    h3{
+      margin: 0px;
+    }
+    p{
+      margin: 0px;
+      vertical-align: baseline;
+    }
+    li{
+      margin-bottom: 10px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid $yellow_color;
+
+      a:link{
+        color: $yellow_color;
+        text-decoration: none;
+      }
+      a:visited{
+        color: $yellow_color;
+      }
+      a:active{
+        text-decoration: none;
+      }
+
+    }
+  }
+}

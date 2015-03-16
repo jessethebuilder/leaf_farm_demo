@@ -1,0 +1,35 @@
+<% if @specials.count > 0 -%>
+  <div id="specials">
+    <%# todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {:section => 'specials'} %>
+
+    <h3 id="Specials" class="text-center">Specials</h3>
+
+    <!--<div class="row"-->
+         <% errod f %>
+    <ul>
+      <% @specials.each do |s| -%>
+        <li>
+          <div class="row special_row">
+            <%#= link_to add_to_order_leaf_farm_demo_path, :remote => true  do %>
+            <div class="col-xs-3">
+              <h4>
+                <%= s.name %>
+              </h4>
+            </div><!-- col -->
+
+            <div class="col-xs-9">
+              <p>
+                <%= s.description %>
+                <!--<h3>-->
+                  <%= s.fine_print %>
+                <!--</h3>-->
+              </p>
+            </div><!-- col -->
+            <%# end -%><!-- link -->
+          </div><!-- row -->
+        </li>
+      <% end -%>
+    </ul>
+
+  </div>
+<% end -%><!-- end specials -->

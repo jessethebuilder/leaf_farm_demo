@@ -1,0 +1,36 @@
+h1{
+  font-size: 120px;
+  font-family: $main_font_family;
+  font-weight: 800;
+  color: $main_font_color;
+  text-shadow: 7px 0px $purple_color;
+}
+
+h2{
+  font-family: $main_font_family;
+  font-weight: 600;
+  color: $yellow_color;
+  font-size: 100px;
+  text-shadow: 5px 2px 0px $purple_color;
+}
+
+h3{
+  font-family: $main_font_family;
+  font-weight: 600;
+  font-size: 64px;
+  color: $purple_color;
+  text-shadow: 2px 2px 2px $pink_color;
+}
+h4{
+  font-family: $main_font_family;
+  font-weight: 500;
+  font-size: 48px;
+  color: $main_font_color;
+  text-shadow: 1px 1px 1px $red_color;
+}
+
+p{
+  font-family: $main_font_family;
+  color: $main_font_color;
+  font-size: 32px;
+}

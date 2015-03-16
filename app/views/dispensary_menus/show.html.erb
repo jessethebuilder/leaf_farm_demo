@@ -1,82 +1,44 @@
 <% head_info('Leaf Farm Demo Menu', 'Demo menu for Leaf Farm', image_url('logos/leaf_farm_with_text_logo.png'),
              'product', 'leaffarm-demo.herokuapp.com', dispensary_menu_url) %>
 
-<div class="container" id="leafly_menu">
-  <h1>Menu</h1>
+<div class="container main_content" id="leafly_menu">
+  <h2 class="text-center">Menu</h2>
 
-  <% if @specials.count > 0 -%>
-    <div id="specials">
-      <%# todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {:section => 'specials'} %>
-
-      <h2 id="Specials">Specials</h2>
-
-      <ul class="price_list">
-        <% @specials.each do |s| -%>
-          <li>
-            <div class="row special_row">
-              <%#= link_to add_to_order_leaf_farm_demo_path, :remote => true  do %>
-              <div class="col-xs-3">
-                <h3>
-                  <%= s.name %>
-
-                  <!--<small>-->
-                  <!--<%= s.description %>-->
-                  <!--</small>-->
-                </h3>
-              </div><!-- col -->
-
-              <div class="col-xs-9">
-                <h4>
-                  <%= s.description %>
-                  <small>
-                    <%= s.fine_print %>
-                  </small>
-                </h4>
-
-              </div><!-- col -->
-              <%# end -%><!-- link -->
-            </div><!-- row -->
-          </li>
-        <% end -%>
-      </ul>
-
-    </div>
-    <% end -%><!-- end specials -->
+  <%= render :partial => 'specials/list' %>
 
 
   <% @menu.each do |title, products| -%>
     <%#todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {section: title.downcase} %>
 
-    <h2 id="<%= title %>"><%= title %></h2>
-
-
+    <h3 id="<%= title %>" class="text-center"><%= title %></h3>
 
     <% products.in_groups_of(2) do |prod_group| -%>
       <div class="row product_row">
 
         <% prod_group.each do |prod| -%>
           <% if prod -%>
-            <%# prod = DispensaryProduct.create_with_leafly_product_hash(product) %>
-
             <div class="col-md-6 leafly_product">
               <div class="col-xs-6">
-                <h3><%= prod.name %> <small><%= prod.description %></small></h3>
+                <h4><%= prod.name %></h4>
+                  <p>
+                    <%= prod.description %>
+                  </p>
 
-                <% if prod.has_rating? -%>
-                  <div class="leafly_rating">
-                    Leafly Rating: <strong><%= prod.rating %></strong>
-                    <small>
-                      based on <%= prod.rating_count %> ratings
-                    </small>
-                  </div>
-                <% end %>
+                <%# if prod.has_rating? -%>
+                  <!--<div class="leafly_rating">-->
+                    <!--Leafly Rating: <strong><%#= prod.rating %></strong>-->
+                    <!--<small>-->
+                      <!--based on <%#= prod.rating_count %> ratings-->
+                    <!--</small>-->
+                  <!--</div>-->
+                <%# end %>
               </div><!-- col -->
 
               <div class="col-xs-2 leafly_link">
                 <% if prod.has_source_image? -%>
                   <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
                     <%= image_tag prod.source_image_path, class: 'float-right', style: 'height:50px;' -%>
-                    <%= content_tag(:h4, prod.category) if prod.category%>
+                    <%= content_tag(:h5, prod.category) if prod.category%>
                   <% end %>
                 <% end -%>
 
@@ -120,23 +82,7 @@
 
 
 <script>
-  //  function link_menu(){
-  //    $('.jump_to_select').change(function(e){
-  //      location.hash = '#' + $(this).val();
-  //      window.scrollBy(0, -120);
-  //      $('.jump_to_select').each(function(){
-  //        $(this).val("Jump to");
-  //      })
-  //    })
-  //  }
-  //
-  //  function prepareLeafFarmDemo(){
-  //    prepareLeaflyTargetBanner();
-  //    prepareMenu();
-  //    link_menu();
-  //  }
-  //
-  //
-  //
-  //  ready_methods.push(prepareLeafFarmDemo);
+  $('#dispensary_reset')
+
+
 </script>

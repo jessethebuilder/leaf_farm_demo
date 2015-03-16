@@ -1,0 +1,73 @@
+#leafly_menu{
+  .product_row{
+    border-bottom: 1px solid $main_font_color;
+
+    .col-md-6{
+      padding-top: 20px;
+    }
+  }
+
+  .leafly_link{
+    a:link{
+      color: $purple_color;
+      //      text-decoration: none;
+    }
+    a:visited{
+      color: $purple_color;
+
+      text-decoration: none;
+    }
+    a:hover{
+      //      text-decoration: ;
+    }
+    a:active{
+      color: $purple_color;
+      text-decoration: none;
+    }
+  }
+
+  .pricing{
+    text-align: right;
+
+    ul{
+      list-style: none;
+      padding-left: 0px;
+
+      li{
+        border-bottom: 1px solid $main_font_color;
+        margin-bottom: 10px;
+        padding-bottom: 3px;
+
+        a:link{
+          color: $purple_color;
+          text-decoration: none;
+        }
+        a:visited{
+          color: $purple_color;
+        }
+        a:active{
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+  .leaf_farm_menu_faux_border_row{
+    height: 1px;
+    background-color: $main_font_color;
+  }
+
+  .special_row{
+
+    padding-top: 10px;
+    text-align: left !important;
+    //    color: green;
+    //    padding-top: 10px;
+    //    border-bottom: 1px solid $yellow_color;
+  }
+
+  .jump_to_row{
+    margin-top: 10px;
+  }
+
+}//end #leafly_menu
