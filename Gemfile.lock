@@ -14,8 +14,9 @@ GIT
       geocoder
       koala (~> 1.11.0rc)
 
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
+GIT
+  remote: https://github.com/jessethebuilder/leaf_farm
+  revision: d4171a3e91c197ce6f6c394e97fdb9279cdadae3
   specs:
     leaf_farm (0.0.2)
       carrierwave
