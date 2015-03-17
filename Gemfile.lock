@@ -1,27 +1,25 @@
 GIT
-  remote: https://github.com/jessethebuilder/TwitterExpress
-  revision: c4e6d01dec11cf2bdd36c8a284f3bca8cd5da31b
-  specs:
-    twitter_express (0.0.1)
-      rails
-
-GIT
   remote: https://github.com/jessethebuilder/farm_tools
-  revision: 1e0cebcd4d51e88604f5931039d71fe4063489f2
+  revision: 90350ba579ceabfe8c449567f5b9e8b10aa57c9b
   specs:
     farm_tools (0.0.3)
       bootsy
       geocoder
       koala (~> 1.11.0rc)
 
-GIT
-  remote: https://github.com/jessethebuilder/leaf_farm
-  revision: d4171a3e91c197ce6f6c394e97fdb9279cdadae3
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
   specs:
     leaf_farm (0.0.2)
       carrierwave
       mini_magick
       rest-client
+
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/twitterexpress/twitterexpress
+  specs:
+    twitter_express (0.0.1)
+      rails
 
 GEM
   remote: https://rubygems.org/
@@ -69,7 +67,7 @@ GEM
     bcrypt (3.1.10-x64-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-sass (3.3.3)
+    bootstrap-sass (3.3.4)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
     bootsy (2.1.0)
@@ -77,9 +75,8 @@ GEM
       mini_magick (~> 4.0)
       remotipart (~> 1.2)
     builder (3.2.2)
-    byebug (4.0.1)
+    byebug (4.0.2)
       columnize (= 0.9.0)
-      rb-readline (= 0.5.2)
     capybara (2.4.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -118,7 +115,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.8)
+    ffi (1.9.8-x64-mingw32)
     formatador (0.2.5)
     geocoder (1.2.7)
     globalid (0.3.3)
@@ -217,7 +214,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rb-readline (0.5.2)
     rdoc (4.2.0)
       json (~> 1.4)
     remotipart (1.2.1)

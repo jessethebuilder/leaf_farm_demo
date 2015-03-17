@@ -1,5 +1,6 @@
 module ApplicationHelper
   include FarmTools
+  include TwitterBootstrapHelper
 
   #todo include as required methods in farm_tools. Throw method not implemented
   ############################farm _tools####################3

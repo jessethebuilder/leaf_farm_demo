@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resource :dispensary
+  resource :dispensary do
+    get 'show_get_slug_modal'
+  end
 
   resource :dispensary_menu
 
-  get 'menu', to: 'dispensary_menus#show'
+  get 'menu', to: 'dispensary_menus#show', :as => 'menu'
+
+  #ajax
 
   root :to => 'dispensaries#show'
 

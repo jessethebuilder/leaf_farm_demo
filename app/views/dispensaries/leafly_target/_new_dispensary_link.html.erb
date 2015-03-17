@@ -1,0 +1,66 @@
+<style>
+  #create_new_dispensary{
+    margin-top: 10px;
+  }
+</style>
+
+<div class="container" id="create_new_dispensary">
+  <div class="row">
+    <div class="col-md-12">
+      <%= link_to 'Create New Dispensary', '#', :id => 'create_new_dispensary_link',
+                  :remote => true, :class => 'pull-right btn btn-warning' %>
+    </div>
+  </div>
+</div>
+<%# end %>
+
+<script>
+  //set as default for users that don't allow geolocation.
+  var user_zip_for_leaf_farm = '98101';
+
+  function buildLeaflyMenu(){
+    $('#create_new_dispensary_link').click(function(){
+      var zip = prompt('Find Dispensaries near a zip code', user_zip_for_leaf_farm);
+      if(zip){
+        var url = '<%= show_get_slug_modal_dispensary_path %>' + '?zip=' + zip;
+        $.ajax(url);
+      } else {
+      }
+    })
+  }
+
+
+  //------------------------------
+
+  var userIsGeolocatable = function(){
+    if('geolocation' in navigator) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function guessUsersZip(){
+    if(userIsGeolocatable){
+      navigator.geolocation.getCurrentPosition(function(position){
+        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({'latLng': latLng}, function(results, status){
+          if(status == google.maps.GeocoderStatus.OK) {
+            var components = results[0].address_components;
+            for(var i = 0; i < components.length; i++){
+              if($.inArray('postal_code', components[i].types) >= 0){
+                user_zip_for_leaf_farm = components[i].long_name;
+              }
+            }
+          } else {
+//            return null;
+          }
+        })
+      })
+    }
+  }
+
+  ready_methods.push(buildLeaflyMenu);
+  ready_methods.push(guessUsersZip);
+</script>

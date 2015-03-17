@@ -1,6 +1,7 @@
 <% head_info('Leaf Farm Demo Menu', 'Demo menu for Leaf Farm', image_url('logos/leaf_farm_with_text_logo.png'),
              'product', 'leaffarm-demo.herokuapp.com', dispensary_menu_url) %>
 
+
 <div class="container main_content" id="leafly_menu">
   <h2 class="text-center">Menu</h2>
 
@@ -18,13 +19,22 @@
         <% prod_group.each do |prod| -%>
           <% if prod -%>
             <div class="col-md-6 leafly_product">
-              <div class="col-xs-6">
+              <div class="col-xs-8">
                 <h4><%= prod.name %></h4>
                   <p>
                     <%= prod.description %>
                   </p>
 
-                <%# if prod.has_rating? -%>
+
+
+
+                <% if prod.has_source_image? -%>
+                  <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
+                    <%= image_tag prod.source_image_path, class: 'float-right', style: 'height:50px;' -%>
+                    <%= content_tag(:h5, prod.category) if prod.category%>
+                  <% end %>
+
+                  <%# if prod.has_rating? -%>
                   <!--<div class="leafly_rating">-->
                     <!--Leafly Rating: <strong><%#= prod.rating %></strong>-->
                     <!--<small>-->
@@ -32,17 +42,13 @@
                     <!--</small>-->
                   <!--</div>-->
                 <%# end %>
-              </div><!-- col -->
-
-              <div class="col-xs-2 leafly_link">
-                <% if prod.has_source_image? -%>
-                  <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
-                    <%= image_tag prod.source_image_path, class: 'float-right', style: 'height:50px;' -%>
-                    <%= content_tag(:h5, prod.category) if prod.category%>
-                  <% end %>
                 <% end -%>
 
               </div><!-- col -->
+
+              <!--<div class="col-xs-2 leafly_link">-->
+
+              <!--</div>&lt;!&ndash; col &ndash;&gt;-->
 
               <div class="col-xs-4 pricing">
                 <ul class="price_list">
@@ -82,7 +88,6 @@
 
 
 <script>
-  $('#dispensary_reset')
 
 
 </script>

@@ -1,0 +1,19 @@
+<%= express_modal('Create a new web application from your Leafly profile in three quarters of a second') do %>
+
+  <%#= @stores.inspect %>
+
+  <div class="form form-inline">
+    <%= select_tag :dispensary_reset_select, array_of_hashes_for_select(@stores, 'name', 'slug'), :prompt => 'Select a Dispensary', :class => 'form-control' %>
+    &nbsp;&nbsp;&nbsp;
+    <a hret="#" id="dispensary_reset_select_button" class="btn btn-primary btn-lg">Build</a>
+  </div>
+
+  <script>
+    $('#dispensary_reset_select_button').click(function(e){
+      var selected_dispensary_slug = $(this).val();
+      var new_url = '<%= j menu_path %>' + '?leafly_slug=' + selected_dispensary_slug;
+      document.location.href = new_url;
+    })
+  </script>
+
+<% end %>

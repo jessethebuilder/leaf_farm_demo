@@ -6,3 +6,61 @@
   }
 }
 
+.price_list{
+  list-style: none;
+  padding-left: 0px;
+  color: $white_color;
+  font-family: $main_font_family;
+
+  li{
+    text-align: right;
+
+    //    border-bottom: 1px solid $white_color;
+    margin-bottom: 10px;
+    padding-bottom: 3px;
+    font-size: 30px;
+
+    a:link{
+      color: $purple_color;
+      text-decoration: none;
+    }
+    a:visited{
+      color: $purple_color;
+    }
+    a:active{
+      text-decoration: none;
+    }
+
+  }
+}
+
+//-----Modal-----
+.modal-content{
+  //more styles in vendor/bootstrap_customizations
+//  background-image: image_url('backgrounds/chalk_board.jpg');
+//  background-size: 100%;
+
+  h4{
+    color: $pink_color;
+    font-weight: 600;
+    text-shadow: 1px 0 $purple_color;
+    font-size: 40px;
+    line-height: 1em;
+  }
+
+  .modal-body{
+    font-family: $main_font_family;
+    color: $white_color;
+    font-size: 26px;
+  }
+}
+
+select{
+  @include form_controls;
+}
+
+.btn-lg{
+  @include form_controls;
+  background-color: $brand-primary;
+}
+
