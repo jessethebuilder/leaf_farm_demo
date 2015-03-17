@@ -12,6 +12,9 @@
     <%#todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {section: title.downcase} %>
 
     <h3 id="<%= title %>" class="text-center"><%= title %></h3>
+    <!--<span class="text-center">-->
+    <%#= image_tag 'components/red_chalk_underline.png', width: '60%', class: 'centered' %>
+    <!--</span>-->
 
     <% products.in_groups_of(2) do |prod_group| -%>
       <div class="row product_row">
@@ -27,41 +30,31 @@
 
 
 
-
-                <% if prod.has_source_image? -%>
-                  <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
-                    <%= image_tag prod.source_image_path, class: 'float-right', style: 'height:50px;' -%>
-                    <%= content_tag(:h5, prod.category) if prod.category%>
-                  <% end %>
-
-                  <%# if prod.has_rating? -%>
-                  <!--<div class="leafly_rating">-->
-                    <!--Leafly Rating: <strong><%#= prod.rating %></strong>-->
-                    <!--<small>-->
-                      <!--based on <%#= prod.rating_count %> ratings-->
-                    <!--</small>-->
-                  <!--</div>-->
-                <%# end %>
-                <% end -%>
-
               </div><!-- col -->
-
-              <!--<div class="col-xs-2 leafly_link">-->
-
-              <!--</div>&lt;!&ndash; col &ndash;&gt;-->
 
               <div class="col-xs-4 pricing">
                 <ul class="price_list">
                   <!--<li style="border-bottom-width:0px;">(click to order)</li>-->
                   <% prod.pricing_array.each do |price| -%>
                     <li>
-                      <%# todo= link_to add_to_order_leaf_farm_demo_path, :remote => true do %>
-                      <%= price['Unit'] %>:
-                      <strong><%= number_to_currency(price['Price'], :unit => '') %></strong>
-                      <%# end %><!-- link -->
+                      <%= link_to 'add_to_order_leaf_farm_demo_path', :remote => true do %>
+                        <%= price['Unit'] %>:
+                        <strong><%= number_to_currency(price['Price'], :unit => '') %></strong>
+                      <% end %><!-- link -->
                     </li>
                   <% end -%>
                 </ul>
+
+
+
+                <% if prod.has_source_image? -%>
+                  <div class="link_to_leafly_strain text-center">
+                    <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
+                      <%= image_tag prod.source_image_path, style: 'height:100px;' -%>
+                      <%= content_tag(:h5, prod.category) if prod.category%>
+                    <% end %>
+                  </div>
+                <% end -%>
 
               </div><!-- col -->
               <div class="clearfix"></div>

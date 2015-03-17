@@ -18,3 +18,14 @@ $charcoal_color: rgba(0, 0, 0, 0.84);
   background-color:$white_color !important;
   height: 55px !important;
 }
+
+@mixin site_link_container{
+  a:link, a:visited, a:active{
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: $charcoal_color;
+  }
+}

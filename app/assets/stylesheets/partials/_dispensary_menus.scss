@@ -45,4 +45,34 @@
     margin-top: 10px;
   }
 
+  .link_to_leafly_strain{
+//    @include site_link_container;
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    a:link, a:visited, a:active{
+      text-decoration: none;
+      color: $yellow_color;
+    }
+    a:hover{
+      color: $charcoal_color;
+    }
+
+  }
+
+  .price_list{
+//    @include site_link_container;
+    a:link, a:active, a:visited{
+      color: $white_color;
+      text-decoration: none;
+    }
+    a:hover{
+      color: $charcoal_color;
+      text-decoration: none;
+    }
+
+  }
 }//end #leafly_menu
+
+
