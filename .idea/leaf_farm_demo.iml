@@ -225,6 +225,26 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
+      <library name="farm_tools (v0.0.3, C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/db" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/app" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/bin" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/lib" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/.idea" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/db" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/app" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/bin" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/lib" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/.idea" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="leaf_farm (v0.0.2, C:/Users/Bucky/Desktop/jesseweb/leaf_farm) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/../leaf_farm/db" />
@@ -295,7 +315,6 @@
     <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.5.0, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v1.4.3, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.9.1, ruby-2.1.5-p273) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="farm_tools (v0.0.3@90350b, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.8, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="geocoder (v1.2.7, ruby-2.1.5-p273) [gem]" level="application" />

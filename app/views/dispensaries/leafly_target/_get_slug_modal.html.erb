@@ -1,15 +1,24 @@
-<%= express_modal('Create a new web application from your Leafly profile in three quarters of a second') do %>
+<%= express_modal('Create a new web application from your Leafly profile in three seconds') do %>
 
   <%#= @stores.inspect %>
 
-  <div class="form form-inline">
-    <%= select_tag :dispensary_reset_select, array_of_hashes_for_select(@stores, 'name', 'slug'), :prompt => 'Select a Dispensary', :class => 'form-control' %>
-    &nbsp;&nbsp;&nbsp;
-    <a hret="#" id="dispensary_reset_select_button" class="btn btn-primary btn-lg">Build</a>
-  </div>
+  <form class="form form-inline" id="dispensary_reset_form">
+    <div class="form-group">
+      <%= select_tag :dispensary_reset_select, array_of_hashes_for_select(@stores, 'name', 'slug'),
+                     :prompt => 'Select a Dispensary', :class => 'form-control' %>
+
+      <%#= submit_tag 'Build', :class => "btn btn-primary btn-lg" %>
+
+    </div>
+    <div class="form-group">
+
+    </div>
+  </form>
 
   <script>
-    $('#dispensary_reset_select_button').click(function(e){
+    $('#dispensary_reset_select').change(function(e){
+//      e.preventDefault();
+//      var selected_dispensary_slug = $('#dispensary_reset_select').val();
       var selected_dispensary_slug = $(this).val();
       var new_url = '<%= j menu_path %>' + '?leafly_slug=' + selected_dispensary_slug;
       document.location.href = new_url;
