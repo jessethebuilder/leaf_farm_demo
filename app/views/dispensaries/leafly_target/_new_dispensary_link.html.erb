@@ -22,7 +22,7 @@
     $('#create_new_dispensary_link').click(function(){
       var zip = prompt('Find Dispensaries near a zip code', user_zip_for_leaf_farm);
       if(zip){
-        var url = '<%= show_get_slug_modal_dispensary_path %>' + '?zip=' + zip;
+        var url = '<%= j show_get_slug_modal_dispensary_path %>' + '?zip=' + zip;
         $.ajax(url);
       } else {
       }

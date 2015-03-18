@@ -1,0 +1,19 @@
+/*-----------------------------------------------------------
+-The Flash
+-----------------------------------------------------------*/
+
+//-----------------The Flash---------
+.flash{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.flash.alert{
+  background-color: rgba($red_color, .5);
+  color: $white_color;
+}
+
+.flash.notice{
+  background-color: rgba($yellow_color, .5);
+}
