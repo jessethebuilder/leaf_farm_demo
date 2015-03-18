@@ -25,7 +25,7 @@ h3{
 h4{
   font-family: $main_font_family;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 40px;
   color: $purple_color;
   text-shadow: 1px 1px 1px $red_color;
 }
@@ -33,7 +33,7 @@ h4{
 h5{
   font-color: $yellow_color;
   font-family: $main_font_family;
-  font-size: 36px;
+  font-size: 32px;
 
   a:link a:visited{
     color: $yellow_color;
@@ -44,6 +44,6 @@ p{
   font-family: $main_font_family;
   color: $white_color;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
   text-shadow: 1px 1px $charcoal_color;
 }

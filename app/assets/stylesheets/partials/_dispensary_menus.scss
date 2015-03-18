@@ -49,7 +49,7 @@
   .link_to_leafly_strain{
 //    @include site_link_container;
 
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
 
     a:link, a:visited, a:active{
@@ -60,10 +60,19 @@
       color: $charcoal_color;
     }
 
+    img{
+      height: 75px;
+    }
+
   }
 
   .price_list{
 //    @include site_link_container;
+
+    li{
+      margin-bottom: 0;
+    }
+
     a:link, a:active, a:visited{
       color: $white_color;
       text-decoration: none;

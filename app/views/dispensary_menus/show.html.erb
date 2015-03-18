@@ -24,10 +24,7 @@
                   <p>
                     <%= prod.description %>
                   </p>
-
-
-
-              </div><!-- col -->
+              </div><!-- inner col -->
 
               <div class="col-xs-4 pricing">
                 <ul class="price_list">
@@ -47,7 +44,7 @@
                 <% if prod.has_source_image? -%>
                   <div class="link_to_leafly_strain text-center">
                     <%= link_to leafly_strain_url(prod), :target => '_blank' do %>
-                      <%= image_tag prod.source_image_path, style: 'height:100px;' -%>
+                      <%= image_tag prod.source_image_path -%>
                       <%= content_tag(:h5, prod.category) if prod.category%>
                     <% end %>
                   </div>
