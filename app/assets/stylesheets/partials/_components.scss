@@ -1,3 +1,5 @@
+@import 'forms';
+
 .dispensary_name{
   margin-top: 20px;
 
@@ -35,6 +37,10 @@
 }
 
 //-----Modal-----
+.modal{
+  margin-top: 15%;
+}
+
 .modal-content{
   //more styles in vendor/bootstrap_customizations
 //  background-image: image_url('backgrounds/chalk_board.jpg');
@@ -48,6 +54,8 @@
     line-height: 1em;
   }
 
+
+
   .modal-body{
     font-family: $main_font_family;
     color: $white_color;
@@ -55,12 +63,8 @@
   }
 }
 
-select{
-  @include form_controls;
-}
-
-.btn-lg{
-  @include form_controls;
-  background-color: $brand-primary;
+//----------JumpTo Select--------------
+.jump_to_select_row{
+  margin-top: 10px;
 }
 

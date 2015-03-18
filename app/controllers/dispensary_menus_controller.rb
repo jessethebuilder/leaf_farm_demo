@@ -3,13 +3,12 @@ class DispensaryMenusController < ApplicationController
 
 
   def show
-    @specials = @dispensary.dispensary_menu.quick_specials
   end
 
   private
 
   def set_menu
-    #a Dispensary has to exit
-    @menu = @dispensary.dispensary_menu.quick_menu
+    #@dispensary is set in ApplicationController
+    @menu = @dispensary.dispensary_menu
   end
 end

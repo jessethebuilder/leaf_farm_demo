@@ -2,19 +2,16 @@
              'product', 'leaffarm-demo.herokuapp.com', dispensary_menu_url) %>
 
 
-<div class="container main_content" id="leafly_menu">
+<div class="container main_content" id="dispensary_menu">
   <h2 class="text-center">Menu</h2>
 
   <%= render :partial => 'specials/list' %>
 
 
-  <% @menu.each do |title, products| -%>
-    <%#todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {section: title.downcase} %>
+  <% @menu.quick_menu.each do |title, products| -%>
+    <%= render partial: 'dispensary_menus/partials/jump_to_select', locals: {section: title.downcase} %>
 
     <h3 id="<%= title %>" class="text-center"><%= title %></h3>
-    <!--<span class="text-center">-->
-    <%#= image_tag 'components/red_chalk_underline.png', width: '60%', class: 'centered' %>
-    <!--</span>-->
 
     <% products.in_groups_of(2) do |prod_group| -%>
       <div class="row product_row">
@@ -37,7 +34,7 @@
                   <!--<li style="border-bottom-width:0px;">(click to order)</li>-->
                   <% prod.pricing_array.each do |price| -%>
                     <li>
-                      <%= link_to 'add_to_order_leaf_farm_demo_path', :remote => true do %>
+                      <%= link_to order_push_path(1), :remote => true do %>
                         <%= price['Unit'] %>:
                         <strong><%= number_to_currency(price['Price'], :unit => '') %></strong>
                       <% end %><!-- link -->
@@ -82,5 +79,18 @@
 
 <script>
 
+  function jumpToSelectJump(){
+    $('.jump_to_select').change(function(e){
+      location.hash = '#' + $(this).val();
+      window.scrollBy(0, -125);
 
+      //reset the jump_to selects
+      $('.jump_to_select').each(function() {
+        $(this).val('');
+      })
+
+    })
+  }
+
+  ready_methods.push(jumpToSelectJump)
 </script>

@@ -1,12 +1,12 @@
-<% if @specials.count > 0 -%>
+<% if @menu.has_specials? -%>
   <div id="specials">
-    <%# todo = render partial: 'leaf_farm_demos/partials/jump_to_select', locals: {:section => 'specials'} %>
+    <%= render partial: 'dispensary_menus/partials/jump_to_select', locals: {:section => 'specials'} %>
 
     <h3 id="Specials" class="text-center">Specials</h3>
 
     <!--<div class="row"-->
     <ul>
-      <% @specials.each do |s| -%>
+      <% @menu.quick_specials.each do |s| -%>
         <li>
           <div class="row special_row">
             <%#= link_to add_to_order_leaf_farm_demo_path, :remote => true  do %>

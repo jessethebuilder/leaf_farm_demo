@@ -1,4 +1,9 @@
-#leafly_menu{
+#dispensary_menu{
+  h3{
+    margin-top: 0px;
+//    border-bottom: 1px solid $red_color;
+  }
+
   .product_row{
     border-bottom: 1px solid $white_color;
 
@@ -41,10 +46,6 @@
     //    border-bottom: 1px solid $yellow_color;
   }
 
-  .jump_to_row{
-    margin-top: 10px;
-  }
-
   .link_to_leafly_strain{
 //    @include site_link_container;
 
@@ -74,5 +75,6 @@
 
   }
 }//end #leafly_menu
+
 
 

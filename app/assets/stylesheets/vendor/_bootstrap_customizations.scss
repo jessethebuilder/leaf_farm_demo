@@ -1,8 +1,29 @@
+/*-------------------------------------------------
+-Global Settings
+-Navbar
+-Modal
+-Forms
+
+
+--------------------------------------------------*/
+//----------------Global------
+$font-family-serif: $main_font_family;
+$font-family-serif: $font-family-serif;
+
+//----------------Navbar-------
 $navbar-default-bg: rgba($white_color, .85);
 $navbar-inverse-bg: rgba(black, .85);
 
+//---------------Modal-------
 $modal-content-bg: $charcoal_color;
 
-//$input-color: black;
 
+
+
+//----------------Forms---------
+$input-border-radius: 0px;
+$input-border: 0px;
+$input-color: $white_color;
+$input-bg: $charcoal_color;
+$input-border-focus: $background_color;
 

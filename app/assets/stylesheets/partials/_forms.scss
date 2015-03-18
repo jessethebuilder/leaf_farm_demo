@@ -1,0 +1,23 @@
+//other relevant styles in bootstrap customizations
+
+@mixin form_controls{
+//  color: $charcoal_color !important;
+  font-size: 30px !important;
+  font-weight: 500 !important;
+//  background-color:$white_color !important;
+  height: 55px !important;
+  font-family: $main_font_family !important;
+  border: none;
+  border-radius: 0px;
+}
+
+
+
+select{
+  @include form_controls;
+}
+
+.btn-lg{
+  @include form_controls;
+  background-color: $brand-primary;
+}

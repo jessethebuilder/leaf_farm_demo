@@ -11,13 +11,7 @@ $red_color: rgba(#ff0c00, .75);
 $charcoal_color: rgba(0, 0, 0, 0.84);
 
 
-@mixin form_controls{
-  color: $charcoal_color !important;
-  font-size: 30px !important;
-  font-weight: 500 !important;
-  background-color:$white_color !important;
-  height: 55px !important;
-}
+
 
 @mixin site_link_container{
   a:link, a:visited, a:active{

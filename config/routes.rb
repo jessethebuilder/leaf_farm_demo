@@ -9,9 +9,11 @@ Rails.application.routes.draw do
 
   #ajax
 
-  root :to => 'dispensaries#show'
+  root :to => 'dispensary_menus#show'
 
-
+  resources :orders do
+    get 'push'
+  end
 
 
 
