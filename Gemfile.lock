@@ -1,24 +1,27 @@
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools
+GIT
+  remote: https://github.com/jessethebuilder/TwitterExpress
+  revision: 6afbaafc569a8164bc5c65e57b61347b33f07639
+  specs:
+    twitter_express (0.0.1)
+      rails
+
+GIT
+  remote: https://github.com/jessethebuilder/farm_tools
+  revision: 90350ba579ceabfe8c449567f5b9e8b10aa57c9b
   specs:
     farm_tools (0.0.3)
       bootsy
       geocoder
       koala (~> 1.11.0rc)
 
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/leaf_farm
+GIT
+  remote: https://github.com/jessethebuilder/leaf_farm
+  revision: 121c34203c1566b75cf17e10b7710ff4dca95347
   specs:
     leaf_farm (0.0.2)
       carrierwave
       mini_magick
       rest-client
-
-PATH
-  remote: C:/Users/Bucky/Desktop/jesseweb/twitterexpress/twitterexpress
-  specs:
-    twitter_express (0.0.1)
-      rails
 
 GEM
   remote: https://rubygems.org/
@@ -193,7 +196,7 @@ GEM
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
-    rails-dom-testing (1.0.5)
+    rails-dom-testing (1.0.6)
       activesupport (>= 4.2.0.beta, < 5.0)
       nokogiri (~> 1.6.0)
       rails-deprecated_sanitizer (>= 1.0.1)
