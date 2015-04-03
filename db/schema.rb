@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150315211131) do
+ActiveRecord::Schema.define(version: 20150331002801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,16 @@ ActiveRecord::Schema.define(version: 20150315211131) do
     t.datetime "updated_at"
   end
 
+  create_table "mountable_images", force: :cascade do |t|
+    t.string   "image"
+    t.string   "label"
+    t.text     "description"
+    t.integer  "has_mountable_images_id"
+    t.string   "has_mountable_images_type"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
   create_table "news_stories", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
@@ -138,6 +148,7 @@ ActiveRecord::Schema.define(version: 20150315211131) do
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.string   "slug"
+    t.text     "excerpt"
   end
 
   create_table "patient_profiles", force: :cascade do |t|
