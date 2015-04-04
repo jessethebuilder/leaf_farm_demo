@@ -1,19 +1,19 @@
 == README
 
 = What is this?
- - This is a demo application for Leaf Farm, which can be found at https://github.com/jessethebuilder/leaf_farm.
- - Leaf Farm is a plugin for rapidly developing web apps for Marijuana dispensaries (medical or otherwise).
- - This demo uses a Leafly menu as its data source.
- - Neither Leaf Farm nor Anysoft are affiliated or endorsed by Leafly in anyway, though we are greatful thier fine service,
+- This is a demo application for Leaf Farm, which can be found at https://github.com/jessethebuilder/leaf_farm.
+- Leaf Farm is a plugin for rapidly developing web apps for Marijuana dispensaries (medical or otherwise).
+- This demo uses a Leafly menu as its data source.
+- Neither Leaf Farm nor Anysoft are affiliated or endorsed by Leafly in anyway, though we are greatful thier fine service,
    and we invite you to learn more about them at http://www.lealy.com
 
 = Setup
 - Create a Leafly Connection record with a valid Leafly API Id and Key
 - Visit http://leaffarm-demo.herokuapp.com?leafly_slug=[a-valid-leafly-slug]
- - You can use "green-orachard" or "denver-relief" or your own Leafly Slug
+  - You can use "green-orachard" or "denver-relief" or your own Leafly Slug
 - Once these steps are taken once, you can create subsequent demos with the button
   at the page, or by passing a valid Leafly slug to the in the query string, as above.
 
 = About Us
- - We are Anysot, and we can be found at http://anysoft.us
- - We specialize in mobile-ready, commerce and customer serive oriented web applications for small and medium sized businesses.
+- We are Anysot, and we can be found at http://anysoft.us
+- We specialize in mobile-ready, commerce and customer serive oriented web applications for small and medium sized businesses.
