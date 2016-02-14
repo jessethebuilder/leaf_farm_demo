@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_dispensary
-    @dispensary = Dispensary.find_or_build_from_leafly(_leafly_slug, _leafly_connection, :update_frequency => Integer(8.hours))
+    @dispensary = Dispensary.find_or_build_from_leafly(_leafly_slug, _leafly_connection, :update_frequency => Integer(100.years))
     @dispensary.save
   end
 end
